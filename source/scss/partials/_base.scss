@@ -1,0 +1,300 @@
+$primary-color: #ff6d3e;
+$pink: #f55891;
+$secondary-color: #59a0fa;
+$dark-grey: #2a2a2a;
+$grey-text: #434343;
+@mixin lead-font($size, $weight) {
+  font-size: $size !important;
+  font-weight: $weight !important;
+}
+.wrapper {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+main {
+  width: 100%;
+  height: 100vh;
+}
+/* Home Page */
+.layer {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.middleInfo {
+  text-align: center;
+  p {
+    color: #fff;
+    @include lead-font(1.25rem, 300);
+  }
+  button {
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    @include lead-font(1.25rem, 300);
+    padding: 15px 40px;
+    background-color: $primary-color;
+  }
+}
+.infoTxt {
+  width: 100%;
+  padding: 0 2rem;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $secondary-color;
+  p {
+    color: #fff;
+    &:nth-child(1) {
+      @include lead-font(2rem, 300);
+    }
+    &:nth-child(2) {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 0.5rem;
+      @include lead-font(1.25rem, 300);
+    }
+  }
+}
+.polygonal,
+.myworks,
+.skills,
+.works {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+  position: relative;
+  background-size: cover;
+}
+.polygonal {
+  background-image: url('../images/home/me-polygonal-style.jpg');
+}
+.myworks {
+  background-image: url('../images/home/codes.jpg');
+}
+.skills {
+  background-image: url('../images/home/skills.jpg');
+}
+/* My Works Page */
+.works-layer {
+  position: relative;
+  width: 100%;
+  height: 45%;
+  background-color: rgba(0, 0, 0, 0.9);
+  p {
+    color: $primary-color;
+    @include lead-font(1.25rem, 500);
+  }
+  .middleInfo {
+    button {
+      border: 1px solid $primary-color;
+      background-color: $primary-color;
+      &:hover {
+        border: 1px solid darken($primary-color, 20%);
+        background-color: darken($primary-color, 20%);
+      }
+    }
+  }
+}
+.real1 {
+  background-image: url('../images/works/real/railsafe-thumbnail.jpg');
+}
+.real2 {
+  background-image: url('../images/works/real/boefhuset-thumbnail.jpg');
+}
+.real3 {
+  background-image: url('../images/works/real/siangjiang-thumbnail.jpg');
+}
+.school1 {
+  background-image: url('../images/works/school/pixeltree-thumbnail.jpg');
+}
+.school2 {
+  background-image: url('../images/works/school/ste-thumbnail.jpg');
+}
+.school3 {
+  background-image: url('../images/works/school/supersports-thumbnail.jpg');
+}
+.school4 {
+  background-image: url('../images/works/school/dream-on-thumbnail.jpg');
+}
+.school5 {
+  background-image: url('../images/works/school/dtk-thumbnail.jpg');
+}
+/* About Me Page */
+.bars-content {
+  width: 80%;
+  margin-left: 5rem;
+  p {
+    margin: 0 !important;
+  }
+}
+.skill-content {
+  margin-top: 2rem;
+}
+.skillbars {
+  margin:20px auto;
+  border-radius: 5px;
+  height: 35px;
+}
+.aboutContent {
+  p {
+    width: 80%;
+    margin: 0 auto;
+    @include lead-font(1.25rem, 300);
+    line-height: 2.5rem;
+    span {
+      display: block;
+    }
+  }
+}
+/* Contact Page */
+.contact-content {
+  margin-top: 8rem;
+  h4 {
+    margin-bottom: 2rem;
+  }
+}
+/* label color */
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label,
+.input-field input[type=tel]:focus + label,
+.input-field input[type=email]:focus + label,
+textarea.materialize-textarea:focus + label {
+  color: $primary-color !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus,
+.input-field input[type=tel]:focus,
+.input-field input[type=email]:focus,
+textarea.materialize-textarea:focus {
+  border-bottom: 1px solid $primary-color !important;
+  box-shadow: 0 1px 0 0 $primary-color !important;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: $primary-color !important;
+}
+/* Dropdown Selections*/
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #000;
+}
+.btn {
+  background-color: $primary-color !important;
+  &:hover {
+    background-color: darken($primary-color, 20%) !important;
+  }
+}
+
+/* Responsive styles for desktop */
+@media (min-width: 1000px) {
+  .wrapper {
+    display: flex;
+  }
+  main {
+    width: 80%;
+    position: absolute;
+    right: 0;
+  }
+  .flex-main {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* Home Page */
+  .layer {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    &:hover .polygonal,
+    &:hover .myworks,
+    &:hover .skills {
+      opacity: 0.3;
+      z-index: 0;
+    }
+    &:hover .middleInfo {
+      opacity: 1;
+    }
+  }
+  .middleInfo {
+    position: absolute;
+    transition: .5s ease;
+    opacity: 0;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    button {
+      border: 1px solid #fff;
+      background-color: transparent;
+      &:hover {
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+      }
+    }
+  }
+  .infoTxt {
+    width: 50%;
+  }
+  .polygonal,
+  .myworks,
+  .skills,
+  .works {
+    opacity: 1;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+  /* My Works Page */
+  .works-layer {
+    width: 33.33%;
+    background-color: rgba(0, 0, 0, 1);
+    &:hover .works {
+      opacity: 0.3;
+    }
+    &:hover .middleInfo {
+      opacity: 1;
+    }
+  }
+  /* About Me Page */
+  .aboutTxt {
+    z-index: 10;
+    position: absolute;
+  }
+  .triangle-square {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/aboutme/tony.png');
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position: right 5% bottom;
+    .aboutContent {
+      p {
+        width: auto;
+        margin: 3rem 0 0 5rem;
+      }
+    }
+  }
+  .bars-content {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) AND (max-width: 999px) {
+  main {
+    position: absolute;
+    right: 0;
+    top: 64px;
+    z-index: -1;
+  }
+  /* My Works Page */
+  .works-layer {
+    width: 50%;
+  }
+}

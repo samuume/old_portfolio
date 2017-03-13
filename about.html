@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="public/assets/fonts/font-awesome/css/font-awesome.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="public/assets/stylesheets/main.css">
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <a href="index"><h5 class="nametitle">T</h5></a>
+          <ul class="hide-on-med-and-down">
+            <li><a href="index">Home</a></li>
+            <li><a href="about">About me</a></li>
+            <li><a href="works">My Works</a></li>
+            <li><a href="contact">Contact</a></li>
+            <div class="sm-links">
+              <a href="https://github.com/samuume"><i class="fa fa-github" aria-hidden="true"></i></i></a>
+              <a href="https://www.instagram.com/hotpot_with_egg/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/tony-chen-a77b6674/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><h5>Tony Zongyu Chen</h5></li>
+            <li><a href="index">Home</a></li>
+            <li><a href="about">About me</a></li>
+            <li><a href="works">My Works</a></li>
+            <li><a href="contact">Contact</a></li>
+            <div class="sm-links">
+              <a href="https://github.com/samuume"><i class="fa fa-github" aria-hidden="true"></i></i></a>
+              <a href="https://www.instagram.com/hotpot_with_egg/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/tony-chen-a77b6674/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div class="triangle-square">
+          <div class="aboutContent">
+            <p>
+              <span>I am a graduated Multimedia Designer and currently studying web development at EAL Odense.</span>
+              <span>I have 3 years of working experience in web design and web development with clients from Denmark.</span>
+              <span>What i can provide in web design is a modern web design that matches your company's vision,</span>
+              <span>and develop a responsive website to fit the needs of yours</span>
+            </p>
+            <div class="skill-content bars-content">
+              <p>Web Development</p>
+              <div id="skill1" class="skillbars" data-width="70" data-background="#FFC107">JavaScript (70%)</div>
+              <div id="skill2" class="skillbars" data-width="80" data-background="#fb2f2f">HTML5+XML (80%)</div>
+              <div id="skill3" class="skillbars" data-width="80" data-background="#2196F3">CSS+CSS3 (80%)</div>
+              <div id="skill4" class="skillbars" data-width="50" data-background="#F44336">AngularJS (50%)</div>
+              <div id="skill5" class="skillbars" data-width="60" data-background="#3B5998">Bootstrap (60%)</div>
+              <div id="skill6" class="skillbars" data-width="40" data-background="#d64343">CodeIgniter (40%)</div>
+            </div>
+            <div class="bars-content">
+              <p>Design</p>
+              <div id="skill7" class="skillbars" data-width="70" data-background="#fb6f02">Illustrator (70%)</div>
+              <div id="skill8" class="skillbars" data-width="40" data-background="#0042ff">Photoshop (40%)</div>
+              <div id="skill9" class="skillbars" data-width="70" data-background="#00c244">UI / UX (70%)</div>
+              <div id="skill10" class="skillbars" data-width="70" data-background="#9600c2">USER RESEARCH (70%)</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="public/assets/js/sidenav.js"></script>
+    <script src="public/assets/js/simple-skillbar.js"></script>
+    <script>
+        $('.skillbars').simpleSkillbar({});
+    </script>
+  </body>
+</html>
