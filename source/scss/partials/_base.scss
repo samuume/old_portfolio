@@ -87,16 +87,21 @@ main {
 }
 /* My Works Page */
 .works {
-  width: 100%;
-  height: 40%;
+  width: 80%;
+  height: 300px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   display: flex;
   align-items: flex-end;
+  margin: 2rem auto;
+  box-shadow: 1px 3px 3px $grey-text;
+  -webkit-box-shadow: 1px 3px 3px $grey-text;
+  -moz-box-shadow: 1px 3px 3px $grey-text;
   .middleInfo {
     width: 100%;
-    height: 50%;
+    height: auto;
+    padding: 0.1rem 0;
     background-color: rgba(0,0,0,0.9);
     display: flex;
     justify-content: center;
@@ -107,13 +112,15 @@ main {
       color: #fff;
       @include lead-font(1.25rem, 300);
       text-align: center;
+      margin: 0.2rem 0;
     }
     button {
       border: none;
       border-radius: 2px;
       color: #fff;
       @include lead-font(1.25rem, 300);
-      padding: 15px 40px;
+      padding: 8px 20px;
+      margin: 0.5rem 0;
       background-color: $primary-color;
     }
   }
@@ -142,6 +149,9 @@ main {
 }
 .school5 {
   background-image: url('../images/works/school/dtk-thumbnail.jpg');
+}
+.school6 {
+  background-image: url('../images/works/school/tinderbox.jpg');
 }
 /* About Me Page */
 .bars-content {
@@ -261,7 +271,8 @@ textarea.materialize-textarea:focus {
   }
   .works {
     width: 30%;
-    margin-top: 2rem;
+    height: 400px;
+    margin: 2rem 0;
     backface-visibility: hidden;
     box-shadow: 1px 3px 3px $grey-text;
     -webkit-box-shadow: 1px 3px 3px $grey-text;
@@ -317,8 +328,7 @@ textarea.materialize-textarea:focus {
   }
   .works-main {
     .works {
-      width: 50%;
-      margin: 0;
+      height: 400px;
     }
   }
 

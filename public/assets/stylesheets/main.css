@@ -100,16 +100,21 @@ main {
 
 /* My Works Page */
 .works {
-  width: 100%;
-  height: 40%;
+  width: 80%;
+  height: 300px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   display: flex;
-  align-items: flex-end; }
+  align-items: flex-end;
+  margin: 2rem auto;
+  box-shadow: 1px 3px 3px #434343;
+  -webkit-box-shadow: 1px 3px 3px #434343;
+  -moz-box-shadow: 1px 3px 3px #434343; }
   .works .middleInfo {
     width: 100%;
-    height: 50%;
+    height: auto;
+    padding: 0.1rem 0;
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
@@ -120,14 +125,16 @@ main {
       color: #fff;
       font-size: 1.25rem !important;
       font-weight: 300 !important;
-      text-align: center; }
+      text-align: center;
+      margin: 0.2rem 0; }
     .works .middleInfo button {
       border: none;
       border-radius: 2px;
       color: #fff;
       font-size: 1.25rem !important;
       font-weight: 300 !important;
-      padding: 15px 40px;
+      padding: 8px 20px;
+      margin: 0.5rem 0;
       background-color: #ff6d3e; }
 
 .real1 {
@@ -153,6 +160,9 @@ main {
 
 .school5 {
   background-image: url("../images/works/school/dtk-thumbnail.jpg"); }
+
+.school6 {
+  background-image: url("../images/works/school/tinderbox.jpg"); }
 
 /* About Me Page */
 .bars-content {
@@ -263,7 +273,8 @@ textarea.materialize-textarea:focus {
     justify-content: space-between !important; }
   .works {
     width: 30%;
-    margin-top: 2rem;
+    height: 400px;
+    margin: 2rem 0;
     backface-visibility: hidden;
     box-shadow: 1px 3px 3px #434343;
     -webkit-box-shadow: 1px 3px 3px #434343;
@@ -306,8 +317,7 @@ textarea.materialize-textarea:focus {
     top: 64px;
     z-index: -1; }
   .works-main .works {
-    width: 50%;
-    margin: 0; } }
+    height: 400px; } }
 
 /* Reset */
 html, body {
@@ -360,7 +370,7 @@ nav {
     width: 50px;
     height: 50px;
     top: 0.3rem;
-    position: relative; }
+    right: 0.5rem; }
   nav .sm-links {
     margin: 4rem auto 0 auto;
     width: 50%;
