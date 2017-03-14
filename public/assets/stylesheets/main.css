@@ -25,33 +25,17 @@ main {
   width: 100%;
   height: 100vh; }
 
+.flex-main {
+  display: flex;
+  flex-wrap: wrap; }
+
 /* Home Page */
-.layer {
-  position: relative;
-  width: 100%;
-  height: 50%;
-  background-color: rgba(0, 0, 0, 0.9); }
-
-.middleInfo {
-  text-align: center; }
-  .middleInfo p {
-    color: #fff;
-    font-size: 1.25rem !important;
-    font-weight: 300 !important; }
-  .middleInfo button {
-    border: none;
-    border-radius: 2px;
-    color: #fff;
-    font-size: 1.25rem !important;
-    font-weight: 300 !important;
-    padding: 15px 40px;
-    background-color: #ff6d3e; }
-
 .infoTxt {
   width: 100%;
   padding: 0 2rem;
-  height: 50%;
+  height: 100%;
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -69,18 +53,41 @@ main {
 
 .polygonal,
 .myworks,
-.skills,
-.works {
+.contact {
   width: 100%;
-  height: 100%;
+  height: 80%;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.3;
-  position: relative;
-  background-size: cover; }
+  align-items: flex-end; }
+  .polygonal .middleInfo,
+  .myworks .middleInfo,
+  .contact .middleInfo {
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .polygonal .middleInfo p,
+    .myworks .middleInfo p,
+    .contact .middleInfo p {
+      color: #fff;
+      font-size: 1.25rem !important;
+      font-weight: 300 !important;
+      margin-top: 0; }
+    .polygonal .middleInfo button,
+    .myworks .middleInfo button,
+    .contact .middleInfo button {
+      border: none;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 1.25rem !important;
+      font-weight: 300 !important;
+      padding: 15px 40px;
+      background-color: #ff6d3e; }
 
 .polygonal {
   background-image: url("../images/home/me-polygonal-style.jpg"); }
@@ -88,25 +95,40 @@ main {
 .myworks {
   background-image: url("../images/home/codes.jpg"); }
 
-.skills {
-  background-image: url("../images/home/skills.jpg"); }
+.contact {
+  background-image: url("../images/home/contact.jpg"); }
 
 /* My Works Page */
-.works-layer {
-  position: relative;
+.works {
   width: 100%;
-  height: 45%;
-  background-color: rgba(0, 0, 0, 0.9); }
-  .works-layer p {
-    color: #ff6d3e;
-    font-size: 1.25rem !important;
-    font-weight: 500 !important; }
-  .works-layer .middleInfo button {
-    border: 1px solid #ff6d3e;
-    background-color: #ff6d3e; }
-    .works-layer .middleInfo button:hover {
-      border: 1px solid #d73400;
-      background-color: #d73400; }
+  height: 40%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end; }
+  .works .middleInfo {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .works .middleInfo p {
+      width: 85%;
+      color: #fff;
+      font-size: 1.25rem !important;
+      font-weight: 300 !important;
+      text-align: center; }
+    .works .middleInfo button {
+      border: none;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 1.25rem !important;
+      font-weight: 300 !important;
+      padding: 15px 40px;
+      background-color: #ff6d3e; }
 
 .real1 {
   background-image: url("../images/works/real/railsafe-thumbnail.jpg"); }
@@ -135,7 +157,7 @@ main {
 /* About Me Page */
 .bars-content {
   width: 80%;
-  margin-left: 5rem; }
+  margin: 0 auto; }
   .bars-content p {
     margin: 0 !important; }
 
@@ -200,54 +222,65 @@ textarea.materialize-textarea:focus {
     display: flex; }
   main {
     width: 80%;
-    position: absolute;
-    right: 0; }
+    right: 0;
+    position: absolute; }
   .flex-main {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap; }
+    width: 80%; }
   /* Home Page */
-  .layer {
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.9); }
-    .layer:hover .polygonal,
-    .layer:hover .myworks,
-    .layer:hover .skills {
-      opacity: 0.3;
-      z-index: 0; }
-    .layer:hover .middleInfo {
-      opacity: 1; }
-  .middleInfo {
-    position: absolute;
-    transition: .5s ease;
-    opacity: 0;
-    -ms-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-    .middleInfo button {
-      border: 1px solid #fff;
-      background-color: transparent; }
-      .middleInfo button:hover {
-        border: 1px solid #ff6d3e;
-        background-color: #ff6d3e; }
-  .infoTxt {
-    width: 50%; }
   .polygonal,
   .myworks,
-  .skills,
-  .works {
-    opacity: 1;
-    transition: 0.5s ease;
+  .contact {
+    width: 50%;
+    height: 50%;
     backface-visibility: hidden; }
+    .polygonal .middleInfo,
+    .myworks .middleInfo,
+    .contact .middleInfo {
+      height: 100%;
+      opacity: 0; }
+      .polygonal .middleInfo button,
+      .myworks .middleInfo button,
+      .contact .middleInfo button {
+        border: 1px solid #fff;
+        background-color: transparent; }
+        .polygonal .middleInfo button:hover,
+        .myworks .middleInfo button:hover,
+        .contact .middleInfo button:hover {
+          transition: 0.5s ease;
+          border: 1px solid #ff6d3e;
+          background-color: #ff6d3e; }
+    .polygonal:hover .middleInfo,
+    .myworks:hover .middleInfo,
+    .contact:hover .middleInfo {
+      opacity: 1;
+      transition: .5s ease; }
+  .infoTxt {
+    width: 50%;
+    height: 50%; }
   /* My Works Page */
-  .works-layer {
-    width: 33.33%;
-    background-color: black; }
-    .works-layer:hover .works {
-      opacity: 0.3; }
-    .works-layer:hover .middleInfo {
-      opacity: 1; }
+  .works-main {
+    padding: 0 5rem;
+    justify-content: space-between !important; }
+  .works {
+    width: 30%;
+    margin-top: 2rem;
+    backface-visibility: hidden;
+    box-shadow: 1px 3px 3px #434343;
+    -webkit-box-shadow: 1px 3px 3px #434343;
+    -moz-box-shadow: 1px 3px 3px #434343; }
+    .works .middleInfo {
+      height: 100%;
+      opacity: 0; }
+      .works .middleInfo button {
+        border: 1px solid #fff;
+        background-color: transparent; }
+        .works .middleInfo button:hover {
+          transition: 0.5s ease;
+          border: 1px solid #ff6d3e;
+          background-color: #ff6d3e; }
+    .works:hover .middleInfo {
+      opacity: 1;
+      transition: .5s ease; }
   /* About Me Page */
   .aboutTxt {
     z-index: 10;
@@ -263,7 +296,8 @@ textarea.materialize-textarea:focus {
       width: auto;
       margin: 3rem 0 0 5rem; }
   .bars-content {
-    width: 50%; } }
+    width: 50%;
+    margin: 0 0 0 5rem !important; } }
 
 @media (min-width: 768px) and (max-width: 999px) {
   main {
@@ -271,9 +305,9 @@ textarea.materialize-textarea:focus {
     right: 0;
     top: 64px;
     z-index: -1; }
-  /* My Works Page */
-  .works-layer {
-    width: 50%; } }
+  .works-main .works {
+    width: 50%;
+    margin: 0; } }
 
 /* Reset */
 html, body {
@@ -312,6 +346,9 @@ nav {
     font-size: 1.25rem !important;
     font-weight: 300 !important;
     color: #fff; }
+  nav .logo {
+    position: absolute;
+    right: 0.5rem; }
   nav .nametitle {
     color: #fff !important;
     font-size: 2rem;
@@ -367,6 +404,9 @@ nav {
     nav ul li {
       float: none;
       margin-top: 1rem; }
+  .logo {
+    position: initial !important;
+    right: 0 !important; }
   .nametitle {
     margin: 8rem auto 5rem auto !important;
     border-radius: 50%;

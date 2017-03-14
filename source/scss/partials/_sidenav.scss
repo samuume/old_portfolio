@@ -19,6 +19,10 @@ nav {
       }
     }
   }
+  .logo {
+    position: absolute;
+    right: 0.5rem;
+  }
   .nametitle {
     color: #fff !important;
     font-size: 2rem;
@@ -88,6 +92,10 @@ nav {
       float: none;
       margin-top: 1rem;
     }
+  }
+  .logo {
+    position: initial !important;
+    right: 0 !important;
   }
   .nametitle {
     margin: 8rem auto 5rem auto !important;
