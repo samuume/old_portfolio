@@ -1,2 +1,2 @@
-# webshop
-School miniproject with SASS and angular.js
+# Old Portfolio
+Old portfolio developed with Materilize CSS
